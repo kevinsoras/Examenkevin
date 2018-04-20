@@ -8,22 +8,17 @@ function rellenar(){
     subtotal=0;
     var producto=document.getElementById("canasta").value;
     var cantidad=document.getElementById("cantidad").value;
-    if(producto=="Arroz"){
-        precio=3.50;
+    if(producto=="Laptop"){
+        precio=4600;
         subtotal=precio*cantidad;
-    }if(producto=="Azucar"){
-        precio=2.50;
+    }if(producto=="Tablet"){
+        precio=850;
         subtotal=precio*cantidad;
-    }if(producto=="Papa"){
-        precio=1.20;
-        subtotal=precio*cantidad;
-    }if(producto=="Camote"){
-        precio=1.50;
-        subtotal=precio*cantidad;
-    }if(producto=="Cebolla"){
-        precio=2.00;
+    }if(producto=="Computadora"){
+        precio=8000;
         subtotal=precio*cantidad;
     }
+    
     
     
     document.getElementById("pro").value=producto;
@@ -75,7 +70,7 @@ function totalsubtotal(){
         total=total+lista[a].subtotal;
         
     }
-    
+    document.getElementById("suba").value=total;
 }
 function igv(){
     var igva=(total*0.18);
@@ -86,39 +81,13 @@ function imprimir(){
     
      var tabla=document.getElementById("productos");
       
-     var fila="<tr><td>"+i+"</td><td>"+nuevapersona.producto+"</td><td>"+nuevapersona.precio+"</td><td>"+nuevapersona.cantidad+"</td><td>"+nuevapersona.subtotal+
-         "</td><td><a href='#' onclick='editar(this)'><img src='iconos/e.png'></td><td><a href='#' onclick='eliminar(this)'><img src='iconos/d.png'></td></tr>";
+     var fila="<tr><td>"+nuevapersona.producto+"</td><td>"+nuevapersona.precio+"</td><td>"+nuevapersona.cantidad+"</td><td>"+nuevapersona.subtotal+
+         "</td><td><a href='#' onclick='eliminar(this)'><img src='iconos/d.png'></td></tr>";
     var fil=document.createElement('tr');
     fil.innerHTML=fila;
     tabla.appendChild(fil);
 }
-function editar(p){
-     re=p.parentNode.parentNode.rowIndex;
-document.getElementById("pro").value=document.getElementById("productos").rows[re].cells[1].innerText;
-document.getElementById("pre").value=document.getElementById("productos").rows[re].cells[2].innerText;
-document.getElementById("cantidad").value=document.getElementById("productos").rows[re].cells[3].innerText;
-document.getElementById("sub").value=document.getElementById("productos").rows[re].cells[4].innerText;
-}
-function modificar(){
-    var condi=confirm("Desea modificar ?");
-    if(condi){
-productos.rows[re].cells[1].innerHTML=document.getElementById("pro").value;
-productos.rows[re].cells[2].innerHTML=document.getElementById("pre").value;
-productos.rows[re].cells[3].innerHTML=document.getElementById("cantidad").value;
-    var confia=document.getElementById("cantidad").value;
-productos.rows[re].cells[4].innerHTML=document.getElementById("sub").value;
-        var confie=document.registerElementById("sub").value;
-       
-        
-        alert("Se modifico perfectamente");
-    }else{
-        alert("No se modifico");
-    }
-    totalsubtotal();
-    igv();
 
-
-}
 function eliminar(p){ 
     var opcion= confirm("Desea eliminar el registro ?");
     if(opcion){
