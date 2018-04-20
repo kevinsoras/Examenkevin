@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+#encabezado{
+    width: 99%;
+    height: 20px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+nav {
+    width: 100%;
+  float: left; /* Desplazamos el nav hacia la izquierda */
+}
+ 
+nav ul {
+  background: white;
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+    border-style: solid;
+}
+ 
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+ 
+nav ul li a {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  margin-right: 85px;
+  padding: 20px;
+  color: #85929E;
+  text-decoration: none;
+    
+}
+nav :hover{
+    color: white;
+}
+#iframe{
+    width: 100%;
+    height: 100%;
+}
+ 
+nav ul li:hover {
+  background: #85929E;
+    color: white;
+}
+#parrafo{
+    float: left;
+    height: 400px;
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 23%
+    
+    
+}
+#a{
+    width: 60%;
+    height: 400px;
+    float: right;
+    margin-top: 100px;
+    
+}
+#pie{
+    width: 98%;
+    height: 200px;
+    float: right
+}
+#pie div{
+    width: 32.4%;
+    height: 200px;
+    float: right;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}

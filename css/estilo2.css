@@ -1,0 +1,9 @@
+*{
+    
+margin: 0;
+    padding: 0;
+}
+#canasta{
+    width: 80px;
+    height: 25px;
+}
